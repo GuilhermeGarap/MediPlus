@@ -1,14 +1,17 @@
 @API_HostAddress = http://localhost:5004
 
-#P A C I E N T E!
+#P A C I E N T E
 ### CRIAR PACIENTES
 POST {{API_HostAddress}}/api/paciente/cadastrar
 Content-Type: application/json
 
 {
-    "PacienteId": ,
-    "ConsultaData": "",
-    "ConsultaNotas": "5"
+    "PacienteCpf": "10217875904",
+    "PacienteNome": "2",
+    "PacienteData": "3",
+    "PacienteGenero": "4",
+    "PacienteTelefone": "5",
+    "PacienteNotas": "5"
 }
 
 ### LISTAR PACIENTES
@@ -21,4 +24,16 @@ GET {{API_HostAddress}}/api/paciente/buscarcpf/10217875904
 ### BUSCAR PACIENTE POR CPF
 GET {{API_HostAddress}}/api/paciente/buscarnome/2
 
-#C O N S U L T A!
+#C O N S U L T A
+
+### CRIAR CONSULTAS
+POST {{API_HostAddress}}/api/consulta/cadastrar
+Content-Type: application/json
+
+{
+    "PacienteId": 2,
+    "ConsultaData": "30/01/2003",
+    "ConsultaNotas": "5"
+}
+### LISTAR CONSULTAS
+GET {{API_HostAddress}}/api/consulta/listar
