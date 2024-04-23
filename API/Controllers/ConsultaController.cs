@@ -24,7 +24,7 @@ public class ConsultaController : ControllerBase
         {
             //Include
             List<Consulta> consultas =
-                _ctx.Consultas.ToList();
+                _ctx.Consultas.Include(x => x.Paciente).ToList();
             return consultas.Count == 0 ? NotFound() : Ok(consultas);
         }
         catch (Exception e)
