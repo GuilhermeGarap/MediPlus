@@ -1,6 +1,24 @@
 @API_HostAddress = http://localhost:5004
 
-GET {{API_HostAddress}}/weatherforecast/
+### CRIAR PACIENTES
+POST {{API_HostAddress}}/api/paciente/cadastrar
+Content-Type: application/json
+
+{
+    "PacienteCpf": "10217875904",
+    "PacienteNome": "2",
+    "PacienteData": "3",
+    "PacienteGenero": "4",
+    "PacienteTelefone": "5",
+    "PacienteNotas": "5"
+}
+
+### LISTAR PACIENTES
+GET {{API_HostAddress}}/api/paciente/listar
 Accept: application/json
 
-###
+### BUSCAR PACIENTE POR CPF
+GET {{API_HostAddress}}/api/paciente/buscarcpf/10217875904
+
+### BUSCAR PACIENTE POR CPF
+GET {{API_HostAddress}}/api/paciente/buscarnome/2
