@@ -2,7 +2,7 @@
 
 public class Paciente
 {
-    public int PacienteId { get; set; }
+    public int? PacienteId { get; set; }
     public string? PacienteCpf { get; set; }
     public string? PacienteNome { get; set; }
     public string? PacienteData { get; set; }
