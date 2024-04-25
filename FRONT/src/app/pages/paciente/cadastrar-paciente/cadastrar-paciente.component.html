@@ -1,0 +1,57 @@
+
+<h1>Cadastrar Paciente</h1>
+<mat-card-content>
+<mat-form-field class="input" id="pacienteNome">
+    <mat-label>Nome:</mat-label>
+    <input 
+    matInput
+    type="text"
+    [(ngModel)]="pacienteNome" />
+</mat-form-field>
+
+<mat-form-field class="input" id="pacienteCpf">
+    <mat-label>CPF:</mat-label>
+    <input 
+    matInput
+    type="text"
+    [(ngModel)]="pacienteCpf" />
+</mat-form-field>
+
+<mat-form-field class="input" id="pacienteData">
+    <mat-label>Data de Nascimento:</mat-label>
+    <input 
+    matInput
+    type="text"
+    [(ngModel)]="pacienteData" />
+</mat-form-field>
+
+<mat-form-field class="input" id="pacienteGenero">
+    <mat-label>Gênero:</mat-label>
+    <input 
+    matInput
+    type="text"
+    [(ngModel)]="pacienteGenero" />
+</mat-form-field>
+
+<mat-form-field class="input" id="pacienteTelefone">
+    <mat-label>Telefone:</mat-label>
+    <input 
+    matInput
+    type="text"
+    [(ngModel)]="pacienteTelefone" />
+</mat-form-field>
+
+<mat-form-field class="input" id="pacienteNotas">
+    <mat-label>Telefone:</mat-label>
+    <input 
+    matInput
+    type="text"
+    [(ngModel)]="pacienteNotas" />
+</mat-form-field>
+</mat-card-content>
+
+<div>
+  <button color="primary" mat-raised-button (click)="cadastrar()">
+    Cadastrar
+</button>
+</div>

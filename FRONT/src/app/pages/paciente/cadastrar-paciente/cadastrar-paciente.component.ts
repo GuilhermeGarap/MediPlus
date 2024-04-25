@@ -4,11 +4,11 @@ import { Router } from '@angular/router';
 import { Paciente } from 'src/app/models/paciente.models';
 
 @Component({
-  selector: 'app-cadastrar-produto',
-  templateUrl: './cadastrar-produto.component.html',
-  styleUrls: ['./cadastrar-produto.component.css']
+  selector: 'app-cadastrar-paciente',
+  templateUrl: './cadastrar-paciente.component.html',
+  styleUrls: ['./cadastrar-paciente.component.css']
 })
-export class CadastrarProdutoComponent {
+export class CadastrarPacienteComponent {
 
   pacienteCpf : string = "";
   pacienteNome : string = "";
