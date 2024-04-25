@@ -1,6 +1,3 @@
-using System.Security.Cryptography.X509Certificates;
-using API.Models;
-
 namespace API.Models;
 
 public class Consulta

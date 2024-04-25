@@ -2,7 +2,7 @@
 
 #P A C I E N T E
 ### CRIAR PACIENTES
-POST {{API_HostAddress}}/api/paciente/cadastrar
+POST http://localhost:5004/api/paciente/cadastrar
 Content-Type: application/json
 
 {
@@ -15,7 +15,7 @@ Content-Type: application/json
 }
 
 ### LISTAR PACIENTES
-GET {{API_HostAddress}}/api/paciente/listar
+GET http://localhost:5004/api/paciente/listar
 Accept: application/json
 
 ### BUSCAR PACIENTE POR CPF
@@ -23,6 +23,9 @@ GET {{API_HostAddress}}/api/paciente/buscarcpf/10217875904
 
 ### BUSCAR PACIENTE POR CPF
 GET {{API_HostAddress}}/api/paciente/buscarnome/2
+
+###
+DELETE {{API_HostAddress}}/api/paciente/deletar/1
 
 #C O N S U L T A
 

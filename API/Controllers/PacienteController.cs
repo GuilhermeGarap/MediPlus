@@ -119,12 +119,12 @@ public class PacienteController : ControllerBase
 
     // DELETE: api/categoria/deletar/5
     [HttpDelete]
-    [Route("deletar/{id}")]
-    public IActionResult Deletar([FromRoute] int id)
+    [Route("deletar/{PacienteId}")]
+    public IActionResult Deletar([FromRoute] int PacienteId)
     {
         try
         {
-            Paciente? pacienteCadastrado = _ctx.Pacientes.Find(id);
+            Paciente? pacienteCadastrado = _ctx.Pacientes.Find(PacienteId);
             if (pacienteCadastrado != null)
             {
                 _ctx.Pacientes.Remove(pacienteCadastrado);

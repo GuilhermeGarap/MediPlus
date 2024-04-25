@@ -11,8 +11,12 @@ public class AppDataContext : DbContext
     public DbSet<Paciente> Pacientes { get; set; }
     public DbSet<Consulta> Consultas { get; set; }
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        base.OnModelCreating(modelBuilder);
-    }
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+    modelBuilder.Entity<Paciente>()
+        .HasMany(p => p.Consultas)
+        .WithOne(c => c.Paciente)
+        .OnDelete(DeleteBehavior.Cascade);
+}
+
 }

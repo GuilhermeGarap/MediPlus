@@ -10,4 +10,6 @@ public class Paciente
     public string? PacienteTelefone { get; set; }
     public string? PacienteNotas { get; set; }
 
+    public List<Consulta> Consultas { get; set; } = new List<Consulta>();
+
 }
