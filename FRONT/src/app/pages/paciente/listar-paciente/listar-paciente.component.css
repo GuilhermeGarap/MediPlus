@@ -7,3 +7,6 @@ table {
     text-align: center;
   }
   
+  button {
+    border-color: rgb(250, 215, 215);
+  }

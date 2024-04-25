@@ -50,11 +50,6 @@ export class ListarPacienteComponent {
         //Requisição com sucesso
         next: (pacientes) => {
           this.pacientes = pacientes;
-          this.snackBar.open("Paciente deletado com sucesso!!", "E-commerce", {
-            duration: 1500,
-            horizontalPosition: "right",
-            verticalPosition: "top",
-          });
         },
         //Requisição com erro
         error: (erro) => {

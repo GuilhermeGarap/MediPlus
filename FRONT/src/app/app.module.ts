@@ -1,5 +1,7 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
@@ -15,6 +17,10 @@ import { MatSelectModule } from "@angular/material/select";
 import { MatInputModule } from "@angular/material/input";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,7 +32,7 @@ import { ListarPacienteComponent } from './pages/paciente/listar-paciente/listar
   declarations: [
     AppComponent,
     CadastrarPacienteComponent,
-    ListarPacienteComponent
+    ListarPacienteComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +51,8 @@ import { ListarPacienteComponent } from './pages/paciente/listar-paciente/listar
     MatInputModule,
     MatFormFieldModule,
     MatSnackBarModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

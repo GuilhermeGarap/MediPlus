@@ -1,48 +1,65 @@
 
-<h1>Cadastrar Paciente</h1>
+<p>Cadastrar Paciente</p>
+<p>Dados Pessoais</p>
 <mat-card-content>
-<mat-form-field class="input" id="pacienteNome">
-    <mat-label>Nome:</mat-label>
-    <input 
-    matInput
-    type="text"
-    [(ngModel)]="pacienteNome" />
+<!-- NOME E SOBRENOME -->
+<mat-form-field>
+  <mat-label class="input" id="pacienteNome">Nome</mat-label>
+  <input 
+  matInput 
+  type="text" 
+  [(ngModel)]="pacienteNome">
 </mat-form-field>
 
+<mat-form-field>
+  <mat-label class="input" id="pacienteSobrenome">Sobrenome</mat-label>
+  <input 
+  matInput 
+  type="text" 
+  [(ngModel)]="pacienteSobrenome">
+</mat-form-field>
+
+<!-- CPF -->
 <mat-form-field class="input" id="pacienteCpf">
-    <mat-label>CPF:</mat-label>
+    <mat-label>CPF</mat-label>
     <input 
     matInput
     type="text"
     [(ngModel)]="pacienteCpf" />
 </mat-form-field>
 
-<mat-form-field class="input" id="pacienteData">
-    <mat-label>Data de Nascimento:</mat-label>
-    <input 
-    matInput
-    type="text"
-    [(ngModel)]="pacienteData" />
-</mat-form-field>
-
-<mat-form-field class="input" id="pacienteGenero">
-    <mat-label>Gênero:</mat-label>
-    <input 
-    matInput
-    type="text"
-    [(ngModel)]="pacienteGenero" />
-</mat-form-field>
-
+<!-- TELEFONE -->
 <mat-form-field class="input" id="pacienteTelefone">
-    <mat-label>Telefone:</mat-label>
+    <mat-label>Telefone</mat-label>
     <input 
-    matInput
-    type="text"
-    [(ngModel)]="pacienteTelefone" />
-</mat-form-field>
+      matInput
+      type="tel"
+      [(ngModel)]="pacienteTelefone"
+    />
+  </mat-form-field>
+
+
+<!-- DATA DE NASCIMENTO -->
+<mat-form-field appearance="fill">
+    <mat-label>Data de Nascimento</mat-label>
+    <input matInput [matDatepicker]="picker" type="input" [(ngModel)]="pacienteData">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+<!-- GÊNERO -->
+<mat-form-field>
+    <mat-label>Gênero</mat-label>
+    <mat-select [(ngModel)]="pacienteGenero">
+      <mat-option *ngFor="let opcao of generoOpcoes" [value]="opcao">{{ opcao }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+<p>Informações Médicas</p>
 
 <mat-form-field class="input" id="pacienteNotas">
-    <mat-label>Telefone:</mat-label>
+    <mat-label>Notas</mat-label>
     <input 
     matInput
     type="text"

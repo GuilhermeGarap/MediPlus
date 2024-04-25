@@ -3,3 +3,10 @@
     display: block;
   }
   
+  mat-form-field{
+    margin-left: 10px;
+  }
+
+  #sobrenome{
+    width: 100%;
+  }
